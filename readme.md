@@ -1,1 +1,1 @@
-# Natours is a learning project, built using MongoDB with Mongoose, Express and Pug templates 
+# Natours is a learning project, built using node.js, MongoDB with Mongoose, Express and Pug templates 
