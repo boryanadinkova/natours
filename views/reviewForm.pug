@@ -1,0 +1,17 @@
+extends base
+
+block content
+  main.main
+    .login-form
+      h2.heading-secondary.ma-bt-lg= `Review ${reviewTour.name} tour`
+      form.form.form--review(data-id=`${reviewTour.id}`)
+        div.center-stars
+          each star, index in [1, 2, 3, 4, 5]
+            div.rating-star-container
+              svg.reviews__star.reviews__star--inactive(data-rating-stars=`${index + 1}`)
+                use(xlink:href='/img/icons.svg#icon-star')
+        .form__group
+          label.form__label(for='review') Your review
+          textarea#review.form__input(name="review", cols="30", rows="10" type='text', placeholder='Leave your feedback here...', required)
+        .form__group
+          button.btn.btn--green Submit
