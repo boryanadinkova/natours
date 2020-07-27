@@ -6,7 +6,6 @@ import { login, logout, signup } from './login';
 import { reviewTour } from './review';
 import { updateSettings } from './updateSettings';
 import { bookTour } from './stripePayments';
-import { showAlert } from './alerts';
 
 const mapBox = document.getElementById('map');
 const signupForm = document.querySelector('.form--signup');
@@ -107,6 +106,3 @@ if (reviewForm)
     reviewTour(tourId, review, rating);
   });
 
-const alertMessage = document.querySelector('body').dataset.alert;
-
-if (alertMessage) showAlert('success', alertMessage);
