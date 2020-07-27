@@ -4,7 +4,7 @@
   "description": "node, express, mongodb training project",
   "main": "app.js",
   "engines": {
-    "node": ">=10.0.0"
+    "node": "^10"
   },
   "scripts": {
     "start": "node server.js",
