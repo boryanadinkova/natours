@@ -6,6 +6,7 @@ import { login, logout, signup } from './login';
 import { reviewTour } from './review';
 import { updateSettings } from './updateSettings';
 import { bookTour } from './stripePayments';
+import { showAlert } from './alerts';
 
 const mapBox = document.getElementById('map');
 const signupForm = document.querySelector('.form--signup');
@@ -105,3 +106,7 @@ if (reviewForm)
     const review = document.getElementById('review').value;
     reviewTour(tourId, review, rating);
   });
+
+const alertMessage = document.querySelector('body').dataset.alert;
+
+if (alert) showAlert('success', alertMessage);
